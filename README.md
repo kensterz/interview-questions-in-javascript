@@ -58,7 +58,8 @@
     }
     
     // Find theoretical sum of the consecutive numbers using a variation of Gauss Sum. 
-    // Formula: [(N * (N + 1)) / 2] - [(M * (M - 1)) / 2]; N is the upper bound and M is the lower bound
+    // Formula: [(N * (N + 1)) / 2] - [(M * (M - 1)) / 2]; 
+    // N is the upper bound and M is the lower bound
     
     upper_limit_sum = (upper_bound * (upper_bound + 1)) / 2;
     lower_limit_sum = (lower_bound * (lower_bound - 1)) / 2;
