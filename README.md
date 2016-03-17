@@ -92,7 +92,7 @@
     return unique;
   }
   ```
-  **[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**
 
 ## Strings
 <a name="string--reverse"></a><a name="2.1"></a>
@@ -152,7 +152,7 @@
     return (letters_only === letters_only.split("").reverse().join(""));
   }
   ```
-  **[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**
 
 ## Stacks and Queues
 
