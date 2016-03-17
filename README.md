@@ -73,23 +73,17 @@
 - **[1.3](#array--unique) Removing duplicates of an array and returning an array of only unique elements**
   ```javascript
   
-  var array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+  var array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8]
 
   uniqueArray(array); // [1, 2, 3, 5, 9, 8]
 
   function uniqueArray(array) {
-    var hashmap = {};
-    var unique = [];
-    
-    for(var i = 0; i < array.length; i++) {
-    
-      // If key returns null (unique), it is evaluated as false. 
-      if(!hashmap[i]) {
-        hashmap[i] = 1;
-        unique.push(array[i]);
+    array.reduce(function(prev, curr) {
+      if (prev.indexOf(curr) === -1) {
+        prev.push(curr)
       }
-    }
-    return unique;
+      return prev
+    }, [])
   }
   ```
 **[⬆ back to top](#table-of-contents)**
