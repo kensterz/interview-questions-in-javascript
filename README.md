@@ -10,7 +10,7 @@
 
 ## Array
 <a name="array--product"></a><a name="1.1"></a>
-- **[1.1](#array--product) Given an array of integers, find the largest product yielded from three of the integers**  
+- **[1.1](#array--product) Given an array of integers, find the largest product yielded from three of the integers**
   ```javascript
   var unsorted_array = [-10, 7, 29, 30, 5, -10, -70];
 
@@ -36,7 +36,7 @@
     if (product1 > product2) return product1;
     
     return product2
-  };  
+  };
   ```
 <a name="array--consecutive--sum"></a><a name="1.2"></a>
 - **[1.2](#array--consecutive--sum) Being told that a unsorted array contains (n - 1) of n consecutive numbers (where the bounds are defined), find the missing number in `O(n)` time**  
@@ -91,7 +91,7 @@
 
 ## Strings
 <a name="string--reverse"></a><a name="2.1"></a>
-- **[2.1](#string--reverse) Given an string, reverse each word in the sentence**  
+- **[2.1](#string--reverse) Given an string, reverse each word in the sentence**
   `"Welcome to this Javascript Guide!"` should be become `"emocleW ot siht tpircsavaJ !ediuG"`
   ```javascript
   
@@ -108,7 +108,7 @@
   }
   ```
 <a name="string--anagram"></a><a name="2.2"></a>
-- **[2.2](#string--anagram) Given a two string, return true if they are anagrams of one another**  
+- **[2.2](#string--anagram) Given a two string, return true if they are anagrams of one another**
   `"Mary" is an anagram of "Army"`
   ``` javascript
   
@@ -131,7 +131,7 @@
   }
   ```
 <a name="string--palindrome"></a><a name="2.3"></a>
-- **[2.3](#string--palindrome) Check if a given string is a palindrome**  
+- **[2.3](#string--palindrome) Check if a given string is a palindrome**
   `"racecar" is a palindrome. "race car" should also be considered a palindrome. Case sensitivity should be taken into account`
   ```javascript
 
@@ -152,7 +152,7 @@
 ## Stacks and Queues
 
 <a name="stack-queue--stack-as-queue"></a><a name="3.1"></a>
-- **[3.1](#stack-queue--stack-as-queue) Implement enqueue and dequeue using only two stacks**  
+- **[3.1](#stack-queue--stack-as-queue) Implement enqueue and dequeue using only two stacks**
   ```javascript
   
   var input_stack = []; // first stack
@@ -179,4 +179,43 @@
 
 **[⬆ back to top](#table-of-contents)**
 
+<a name="stack-queue--parentheses-balancing"></a><a name="3.2"></a>
+- **Create a function that will evaluate if a given expression has balanced parentheses**
+  In this example, we will only consider "{}" as valid parentheses
+  `{}{}` would be considered balancing. `{{{}}` is not balanced
+  ```javascript
+
+  var expression = "{{}}{}{}"
+
+  function isBalanced(expression) {
+  	
+  	var check_string = expression;
+  	var stack = [];
+
+  	// If empty, parentheses are technically balanced
+  	if (check_string.length <= 0) return true
+
+  	for (var i = 0; i < check_string.length; i++) {
+      if(check_string[i] === '{') {
+        stack.push(check_string[i]);
+      } else if (check_string[i] === '}') {
+      	// pop on an empty array is undefined
+      	if (stack.pop()) {
+          stack.pop();
+      	} else {
+      	  return false;
+      	}
+      }
+  	}
+
+  	// If the array is not empty, it is not balanced
+  	if (stack.pop()) return false;
+  	return true;
+  }
+
+  ```
+
 ## Logic Riddles
+
+
+**[⬆ back to top](#table-of-contents)**
