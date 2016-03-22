@@ -203,26 +203,22 @@
 
   function isBalanced(expression) {
     var check_string = expression;
-    var stack = [];
+    var count = 0;
 
     // If empty, parentheses are technically balanced
     if (check_string.length <= 0) return true
   	
     for (var i = 0; i < check_string.length; i++) {
       if(check_string[i] === '{') {
-        stack.push(check_string[i]);
+        count++;
       } else if (check_string[i] === '}') {
-        // pop on an empty array is undefined
-        if (stack.pop()) {
-          stack.pop();
-        } else {
-          return false;
-        }
+        count--;
+        if (count < 0) return false;
       }
     }
     
-    // If the array is not empty, it is not balanced
-    if (stack.pop()) return false;
+    // If the count is not is not zero, it is not balanced
+    if (count !== 0) return false;
     return true;
   }
   ```
