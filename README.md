@@ -313,6 +313,32 @@
 **[⬆ back to top](#table-of-contents)**
 
 ## Javascript
+<a name="javascript--hoisting"></a><a name="5.1"></a>
+- **[5.1](#javascript--hosting) Explain what is `hoisting` in Javascript**
+  ```
+  Hoisting is the concept in which Javascript, by default, moves all declarations to the top  
+  of the current scope. As such, a variable can be used before it has been declared. Note that  
+  Javascript only hoists declarations and not initializations.
+  ```
+
+<a name="javascript--use-strict"></a><a name="5.2"></a>
+- **[5.2](#javascript--use-strict) Explain the functionality of the `use strict;` directive**
+  ```
+  the `use strict` directive defines that the Javascript should be executed in `strict mode`.  
+  One major benefit that strict mode provides is that it prevents developers from using  
+  undeclared variables. Older versions of javascript would ignore this directive declaration
+  ```
+  ```javascript
+  // example of strict mode
+  
+  "use strict";
+  catchThemAll();
+
+  function catchThemAll() {
+    x = 3.14; // error will be thrown
+    return x * x;
+  }
+  ```
 
 **[⬆ back to top](#table-of-contents)**
 
