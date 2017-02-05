@@ -244,28 +244,18 @@
 ## Stacks and Queues
 
 <a name="stack-queue--stack-as-queue"></a><a name="3.1"></a>
-- **[3.1](#stack-queue--stack-as-queue) Implement enqueue and dequeue using only two stacks**
+- **[3.1](#stack-queue--stack-as-queue) Implement enqueue and dequeue using only one stack**
   ```javascript
 
-  var input_stack = []; // first stack
-  var output_stack = []; // second stack
+  var stack = []; 
 
-  // For enqueue, just push the item into the first stack
-  function enqueue(stack_input, item) {
-    return stack_input.push(input);
+  // For enqueue, just push the item into the stack
+  function enqueue(stack, item) {
+    return stack.push(input);
   }
 
-  function dequeue(stack_input, stack_output) {
-    // Reverse the stack such that the first element of the output stack is the
-    // last element of the input stack. After that, pop the top of the output to
-    // get the first element that was ever pushed into the input stack
-    if (stack_output.length <= 0) {
-      while(stack_input.length > 0) {
-        var element_to_output = stack_input.pop();
-        stack_output.push(element_to_output);
-      }
-      return stack_output.pop();
-    }
+  function dequeue(stack) {
+    return stack.shift();
   }
   ```
 <a name="stack-queue--parentheses-balancing"></a><a name="3.2"></a>
