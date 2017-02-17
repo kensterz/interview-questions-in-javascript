@@ -230,7 +230,7 @@
   // Output becomes !ediuG tpircsavaJ siht ot emocleW
   var reverse_entire_sentence = reverseBySeparator(string, "");
 
-  // Output becomes emocleW ot siht tpircsavaJ !ediuG
+  // Output becomes Guide! Javascript this to Welcome
   var reverse_each_word = reverseBySeparator(reverse_entire_sentence, " ");
 
   function reverseBySeparator(string, separator) {
