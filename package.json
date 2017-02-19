@@ -1,0 +1,27 @@
+{
+  "name": "interview-questions-in-javascript",
+  "version": "0.0.1",
+  "description": "Interview Questions in JavaScript with testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha 'demo/**/*.spec.js'"
+  },
+  "repository": "git+https://github.com/kennymkchan/interview-questions-in-javascript.git",
+  "keywords": [
+    "javascript",
+    "interview"
+  ],
+  "author": "Kenny Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kennymkchan/interview-questions-in-javascript/issues"
+  },
+  "homepage": "https://github.com/kennymkchan/interview-questions-in-javascript#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "engines" : { 
+    "node" : ">= 6" 
+  }
+}
