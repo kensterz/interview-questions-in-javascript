@@ -277,7 +277,7 @@
   **View on Codepen:** http://codepen.io/kennymkchan/pen/xgNNNB?editors=0012
 
 <a name="string--isIsomorphic"></a><a name="2.3"></a>
-- **[2.3](#string--palindrome) Check if a given string is a isomorphic**
+- **[2.4](#string--palindrome) Check if a given string is a isomorphic**
 
   ```
   For two strings to be isomorphic, all occurrences of a character in string A can be replaced with another character
