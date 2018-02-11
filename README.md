@@ -129,7 +129,7 @@
     for (var i = 1; i < array.length; i++) {
       if (array[i] > currentMin && (array[i] - currentMin > currentMaxDifference)) {
         currentMaxDifference = array[i] - currentMin;
-      } else if (array[i] <= currentMin) {
+      } else if (array[i] < currentMin && i !== array.length - 1) {
         currentMin = array[i];
       }
     }
