@@ -10,35 +10,37 @@
 1. [Javascript Specific](#javascript)
 1. To Be Continued
 
+## Want to Test Solutions ?
+__[Demo and testing](demo)__
+ - `npm install` or `yarn install`
+ - `npm test`
+
 ## Array
 <a name="array--product"></a><a name="1.1"></a>
 - **[1.1](#array--product) Given an array of integers, find the largest product yielded from three of the integers**
+  [Testing](demo/array/array-product.spec.js)
   ```javascript
-  var unsortedArray = [-10, 7, 29, 30, 5, -10, -70];
+  const unsortedArray = [-10, 7, 29, 30, 5, -10, -70];
 
   computeProduct(unsortedArray); // 21000
 
-  function sortIntegers(a, b) {
-    return a - b;
-  }
+  const sortIntegers = (a, b) => a - b;
 
   // Greatest product is either (min1 * min2 * max1 || max1 * max2 * max3)
-  function computeProduct(unsorted) {
-    var sortedArray = unsorted.sort(sortIntegers),
-      product1 = 1,
-      product2 = 1,
-      array_n_element = sortedArray.length - 1;
+  const computeProduct = (unsorted) => {
+    const sortedArray = unsorted.sort(sortIntegers);
+    let product1 = 1;
+    let product2 = 1;
+    const array_n_element = sortedArray.length - 1;
 
     // Get the product of three largest integers in sorted array
-    for (var x = array_n_element; x > array_n_element - 3; x--) {
+    for (let x = array_n_element; x > array_n_element - 3; x--) {
         product1 = product1 * sortedArray[x];
     }
 
     product2 = sortedArray[0] * sortedArray[1] * sortedArray[array_n_element];
 
-    if (product1 > product2) return product1;
-
-    return product2;
+    return product1 > product2 ? product1 : product2;
   }
   ```
   **View on Codepen:** https://codepen.io/kennymkchan/pen/LxoMvm?editors=0012
